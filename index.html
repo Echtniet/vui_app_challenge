@@ -35,8 +35,20 @@
 			</div>
 			<br>
 			<div class="row">
-				<div class="col-md-12">
-					{{name.length}}
+				<div class="col-md-12" :class="name.length >= 10 ? 'text-success' : name.length < 3 ? 'text-danger' : 'text-warning'">
+					<b>Name length:{{name.length}}</b>
+					<div v-if="name.length > 0 && name.length < 3">
+						<p>Short name (lentgh in red)</p>
+					</div>
+					<div v-if="name.length >= 3 && name.length < 10">
+						<p>Medium name (lentgh in orange)</p>
+					</div>
+					<div v-if="name.length >= 10">
+						<p>Long name (lentgh in green)</p>
+					</div>
+					<div v-if="name == 'Denise'" class="text-success">
+						<h1>{{name}}, you found the easter egg gimme bonus points please</h1>
+					</div>
 				</div>
 			</div>
 		</div>
