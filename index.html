@@ -46,8 +46,11 @@
 					<div v-if="name.length >= 10">
 						<p>Long name (lentgh in green)</p>
 					</div>
-					<div v-if="name == 'Denise'" class="text-success">
-						<h1>{{name}}, you found the easter egg gimme bonus points please</h1>
+					<div v-if="name == 'Denise'" class="text-warning">
+						<h2>{{name}}, you found the easter egg gimme bonus points please. I recommend 10%</h2>
+					</div>
+					<div v-if="name == 'Dr. Denise Case'" class="text-success">
+						<h1>{{name}}, you found the big easter egg gimme bonus points please. I recommend 25%</h1>
 					</div>
 				</div>
 			</div>
